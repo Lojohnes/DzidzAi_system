@@ -1,0 +1,47 @@
+services:
+  # Type of service to deploy
+  type: web
+  
+  # Name of your service
+  name: dzidza-ai-backend
+  
+  # Runtime environment
+  runtime: node
+  
+  # Build configuration
+  buildCommand: "npm run build"
+  
+  # Start command
+  startCommand: "npm start"
+  
+  # Directory to deploy from
+  rootDir: backend
+  
+  # Environment variables (you can also set these in Render dashboard)
+  envVars:
+    - key: NODE_ENV
+      value: production
+    - key: DATABASE_URL
+      value: your_postgresql_url_here
+    - key: REDIS_URL
+      value: your_redis_url_here
+    - key: GROQ_API_KEY
+      value: your_groq_api_key_here
+    - key: JWT_SECRET
+      value: your_jwt_secret_here
+    - key: FRONTEND_URL
+      value: https://your-vercel-app.vercel.app
+    - key: PORT
+      value: 10000
+
+  # Health check path
+  healthCheckPath: /health
+
+  # Auto-deploy configuration
+  autoDeploy: true
+  
+  # Branch to deploy
+  branch: main
+
+# Plan: Free
+# Add-ons: None needed for basic deployment
