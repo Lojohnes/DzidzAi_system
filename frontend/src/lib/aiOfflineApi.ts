@@ -54,7 +54,7 @@ export async function syncQueuedAIRequests(token: string) {
   let synced = 0;
   for (const item of queue) {
     const data = await generateAIOnline(item.payload, token, item.id);
-    upsertCachedResponse(item.payload, data);
+    upsertCachedResponseForUser(item.payload, data, 20, 'user');
     dequeueRequest(item.id);
     synced += 1;
   }
