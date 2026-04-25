@@ -83,24 +83,6 @@ export function writeCache(items: CachedAIResponse[]) {
   localStorage.setItem(CACHE_KEY, JSON.stringify(items));
 }
 
-export function upsertCachedResponse(payload: AIGeneratePayload, response: unknown, maxItems = 20, userId?: string) {
-  const key = makeAIKey(payload);
-  const existing = readCache().filter((x) => x.key !== key);
-  const next: CachedAIResponse[] = [
-    {
-      key,
-      payload: {
-        ...payload,
-        userId: userId || 'unknown'
-      },
-      response,
-      cachedAt: new Date().toISOString(),
-    },
-    ...existing,
-  ].slice(0, maxItems);
-
-  writeCache(next);
-}
 
 // Enhanced function to ensure userId is properly passed for all lesson generations
 export function upsertCachedResponseForUser(payload: AIGeneratePayload, response: unknown, maxItems = 20, userId: string) {
