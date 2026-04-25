@@ -1,8 +1,12 @@
 {
   "name": "dzidza-ai-backend",
   "version": "1.0.0",
+   "engines": {
+    "node": "18.x"
+  },
   "description": "Backend API for DzidzaAI educational platform",
   "main": "dist/app.js",
+ 
   "scripts": {
     "dev": "nodemon src/app.ts",
     "build": "tsc",
