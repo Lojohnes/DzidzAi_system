@@ -2,12 +2,13 @@ services:
   - type: web
     name: dzidza-ai-backend
     runtime: node
-    nodeVersion: 18
-    buildCommand: "npm install && npm run build"
+    buildCommand: "npm ci --only=production && npm run build"
     startCommand: "npm start"
     envVars:
       - key: NODE_ENV
         value: production
+      - key: JWT_SECRET
+        value: 25c6efa85817e9d5a3ccb0e444388a2008dc1b197365dd33b4eaabec886b2c98583a3472e546b454510be87eef027982bb350b709f3c05134a621e0cfd7b1f67
     healthCheckPath: /health
     autoDeploy: true
     branch: main

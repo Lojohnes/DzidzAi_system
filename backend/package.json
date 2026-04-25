@@ -10,7 +10,8 @@
  
   "scripts": {
     "dev": "nodemon src/app.ts",
-    "build": "tsc",
+    "build": "tsc --noEmit false",
+    "build:prod": "tsc --noEmit false",
     "start": "node dist/app.js",
     "test": "jest",
     "test:watch": "jest --watch",
