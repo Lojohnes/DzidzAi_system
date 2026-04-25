@@ -152,9 +152,10 @@ export default function LearnPage() {
         console.log('Has example:', 'example' in response);
         console.log('Has practice_questions:', 'practice_questions' in response);
         console.log('Data structure:', response.data);
-        console.log('Data keys:', Object.keys(response.data || {}));
-        console.log('Data has explanation:', 'explanation' in (response.data || {}));
-        console.log('Data has example:', 'example' in (response.data || {}));
+        const dataObj = response.data as any;
+        console.log('Data keys:', Object.keys(dataObj || {}));
+        console.log('Data has explanation:', 'explanation' in (dataObj || {}));
+        console.log('Data has example:', 'example' in (dataObj || {}));
         
         const { upsertCachedResponseForUser } = await import('../../lib/offlineStore');
         upsertCachedResponseForUser({
