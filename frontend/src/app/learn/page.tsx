@@ -388,8 +388,7 @@ export default function LearnPage() {
                 </div>
               </div>
               <div className="prose prose-sm max-w-none">
-                {console.log('Lesson content display - Mode:', mode, 'Result:', result, 'Has explanation:', !!(result as any).explanation, 'Has example:', !!(result as any).example)}
-                {(result as any).explanation ? (
+                                {(result as any).explanation ? (
                   <div className="mb-4 p-4 bg-blue-50 border border-blue-200 rounded">
                     <p className="text-sm text-blue-800">
                       <strong>Explanation:</strong> {(result as any).explanation}
