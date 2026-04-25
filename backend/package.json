@@ -1,7 +1,7 @@
 {
   "name": "dzidza-ai-backend",
   "version": "1.0.0",
-   "engines": {
+  "engines": {
     "node": "18.x"
   },
   "description": "Backend API for DzidzaAI educational platform",
