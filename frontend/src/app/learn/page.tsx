@@ -251,7 +251,7 @@ export default function LearnPage() {
               value={topic}
               onChange={(e) => setTopic(e.target.value)}
               placeholder="e.g. Addition, fractions, photosynthesis"
-              rightElement={<SpeechToTextButton onTranscript={setTopic} />}
+              rightElement={<SpeechToTextButton onResult={setTopic} />}
               aria-label="Topic"
             />
           </div>
