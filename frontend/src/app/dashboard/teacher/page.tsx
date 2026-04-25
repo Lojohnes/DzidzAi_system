@@ -275,7 +275,7 @@ export default function TeacherDashboardPage() {
                           {new Date(user.createdAt).toLocaleDateString()}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                          <Button variant="outline" size="sm" onClick={() => handleDeleteUser(user.id)}>
+                          <Button variant="outline" onClick={() => handleDeleteUser(user.id)}>
                             Delete
                           </Button>
                         </td>
@@ -337,7 +337,7 @@ export default function TeacherDashboardPage() {
                           {new Date(parent.createdAt).toLocaleDateString()}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                          <Button variant="outline" size="sm" onClick={() => handleDeleteUser(parent.id)}>
+                          <Button variant="outline" onClick={() => handleDeleteUser(parent.id)}>
                             Delete
                           </Button>
                         </td>
@@ -412,7 +412,7 @@ export default function TeacherDashboardPage() {
                           {lastActivity}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                          <Button variant="outline" size="sm" onClick={() => handleDeleteChild(student.id)}>
+                          <Button variant="outline" onClick={() => handleDeleteChild(student.id)}>
                             Delete
                           </Button>
                         </td>
